@@ -4,6 +4,9 @@
   "author": "John Otander",
   "version": "0.0.1",
   "main": "index.js",
+  "bin": {
+    "remove-prefixes": "cli.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -27,7 +30,9 @@
   },
   "homepage": "https://github.com/johnotander/postcss-remove-prefixes",
   "dependencies": {
+    "is-blank": "0.0.1",
     "is-vendor-prefixed": "0.0.1",
+    "meow": "^3.3.0",
     "postcss": "^4.1.16"
   },
   "devDependencies": {

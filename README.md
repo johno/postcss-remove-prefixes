@@ -17,7 +17,7 @@ var removePrefixes = require('postcss-remove-prefixes')
 postcss([ removePrefixes() ]).process(myCss).css
 ```
 
-### Input
+#### Input
 
 ```css
 .flex {
@@ -29,7 +29,7 @@ postcss([ removePrefixes() ]).process(myCss).css
 }
 ```
 
-### Output
+#### Output
 
 ```css
 .flex {
@@ -39,6 +39,15 @@ postcss([ removePrefixes() ]).process(myCss).css
 ```
 
 Note: It is recommended that you use this plugin with [`postcss-unprefix`](https://github.com/yisibl/postcss-unprefix) in case you are missing the unprefixed declaration in your source CSS.
+
+### CLI
+
+```sh
+npm i -g postcss-remove-prefixes
+remove-prefixes -h
+remove-prefixes mycss.css
+remove-prefixes input.css output.css
+```
 
 ## License
 
