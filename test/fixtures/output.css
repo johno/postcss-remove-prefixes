@@ -1,0 +1,7 @@
+/*
+ * display: -moz-flex;
+ */
+.flex {
+  display: flex;
+  flex: 1;
+}

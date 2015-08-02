@@ -1,0 +1,30 @@
+{
+  "name": "postcss-remove-prefixes",
+  "description": "Remove CSS vendor prefixes from your source.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/postcss-remove-prefixes.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/postcss-remove-prefixes/issues"
+  },
+  "homepage": "https://github.com/johnotander/postcss-remove-prefixes",
+  "dependencies": {
+    "is-vendor-prefixed": "0.0.1",
+    "postcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
