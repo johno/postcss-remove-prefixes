@@ -1,6 +1,8 @@
 # postcss-remove-prefixes [![Build Status](https://secure.travis-ci.org/johnotander/postcss-remove-prefixes.png?branch=master)](https://travis-ci.org/johnotander/postcss-remove-prefixes)
 
-Remove CSS vendor prefixes from your source. This ensures that your prebuilt CSS is as terse and concise as possible.
+Remove pesky vendor prefixes from your source CSS files. This ensures that your prebuilt CSS is as terse and concise as possible.
+
+Though, please use [`autoprefixer`](https://github.com/postcss/autoprefixer) as part of your build process to ensure proper browser support.
 
 ## Installation
 
