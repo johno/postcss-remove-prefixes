@@ -14,7 +14,13 @@
     "type": "git",
     "url": "https://github.com/johnotander/postcss-remove-prefixes.git"
   },
-  "keywords": [],
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "prefix",
+    "vendor"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/postcss-remove-prefixes/issues"
