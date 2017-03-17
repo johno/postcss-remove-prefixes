@@ -2,7 +2,7 @@
   "name": "postcss-remove-prefixes",
   "description": "Remove CSS vendor prefixes from your source.",
   "author": "John Otander",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "bin": {
     "remove-prefixes": "cli.js"
