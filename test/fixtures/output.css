@@ -3,5 +3,8 @@
  */
 .flex {
   display: flex;
+  -webkit-font-smoothing: antialiased;
+  -moz-transform: none;
   flex: 1;
 }
+

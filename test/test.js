@@ -18,7 +18,7 @@ function fixture (name) {
 
 function test (input, output) {
   assert.deepEqual(
-    postcss([ postcssRemovePrefixes() ])
+    postcss([ postcssRemovePrefixes({ ignore: [ "font-smoothing", /^-moz-transform$/i ] }) ])
       .process(fixture(input)).css,
     fixture(output)
   )
