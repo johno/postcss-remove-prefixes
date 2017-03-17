@@ -5,28 +5,24 @@ var isVendorPrefixed = require('is-vendor-prefixed')
 
 module.exports = postcss.plugin('postcss-remove-prefixes', function (options) {
   if (!options) {
-    options = {};
+    options = {
+      ignore: []
+    }
   }
 
-  var ignore = options.ignore ? Array.isArray(options.ignore) ? options.ignore : false : [];
-
-  if (ignore === false) {
+  if (!Array.isArray(options.ignore)) {
     throw TypeError("options.ignore must be an array")
   }
 
-  for (var i = 0; i < ignore.length; ++i) {
-    var value = ignore[i];
-
-    if (typeof value === "string") {
-      value = new RegExp(value + "$", "i")
+  var ignore = options.ignore.map(function (value) {
+    if (typeof value === 'string') {
+      return new RegExp(value + '$', 'i')
     } else if (value instanceof RegExp) {
-
+      return value
     } else {
-      throw TypeError("options.ignore values can either be a string or a regular expression")
+      throw TypeError('options.ignore values can either be a string or a regular expression')
     }
-
-    ignore[i] = value;
-  }
+  })
 
   return function removePrefixes(root, result) {
     root.walkDecls(function (declaration) {
