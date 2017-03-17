@@ -7,15 +7,15 @@ module.exports = postcss.plugin('postcss-remove-prefixes', function (options) {
   if (!options) {
     options = {};
   }
-  
-  let ignore = options.ignore ? Array.isArray(options.ignore) ? options.ignore : false : [];
+
+  var ignore = options.ignore ? Array.isArray(options.ignore) ? options.ignore : false : [];
 
   if (ignore === false) {
     throw TypeError("options.ignore must be an array")
   }
 
-  for (let i = 0; i < ignore.length; ++i) {
-    let value = ignore[i];
+  for (var i = 0; i < ignore.length; ++i) {
+    var value = ignore[i];
 
     if (typeof value === "string") {
       value = new RegExp(value + "$", "i")
@@ -31,10 +31,10 @@ module.exports = postcss.plugin('postcss-remove-prefixes', function (options) {
   return function removePrefixes(root, result) {
     root.walkDecls(function (declaration) {
       if (isVendorPrefixed(declaration.prop) || isVendorPrefixed(declaration.value)) {
-        let isIgnored = false;
+        var isIgnored = false;
 
-        for (let i = 0; i < ignore.length; ++i) {
-          let value = ignore[i];
+        for (var i = 0; i < ignore.length; ++i) {
+          var value = ignore[i];
 
           if (value.test(declaration.prop)) {
             isIgnored = true;
